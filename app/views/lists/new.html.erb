@@ -1,12 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Create a new list</h1>
-      <%= simple_form_for @list do |f| %>
-        <%= f.input :name %>
-        <%= f.input :url_image %>
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
-    </div>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <img class="avatar" alt="avatar" src="https://thumbs.dreamstime.com/b/continuous-line-drawing-movie-clapper-board-film-reel-flap-retro-design-217829640.jpg" />
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "My lists", lists_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "New list", new_list_path, class: "nav-link" %>
+        </li>
+      </ul>
   </div>
 </div>
+<%= render 'form', list: @list %>

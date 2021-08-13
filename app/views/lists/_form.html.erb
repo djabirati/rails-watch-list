@@ -1,0 +1,19 @@
+<div id="new-form">
+  <div class="new-container" >
+    <h1 class="text-center">Add a new list</h1>
+    <form class="newList-form" action="/lists" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <label class="col-one-half">
+        <span class="label-text">Name</span>
+        <input type="text" name="list[name]" >
+      </label>
+      <label class="col-one-half">
+        <span class="label-text">Image</span>
+        <input type="text" name="list[url_image]">
+      </label>
+      <div class="text-center">
+        <button class="submit" name="register">Create a new list</button>
+      </div>
+    </form>
+  </div>
+</div>
